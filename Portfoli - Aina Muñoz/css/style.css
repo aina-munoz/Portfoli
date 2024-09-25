@@ -1,3 +1,150 @@
-body{
-    background-color: lightgrey;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --font-principal: "Playfair Display", system-ui;
+    --font-secundaria: "Inria Sans", sans-serif;
+
+    --pes-font: 300;
+    --pes-negre: 900;
+
+    --color-clar: #dedbd2;
+    --color-verd: #b0c4b1;
+    --color-fosc: #4a5759;
+
+    --tamany-h1: 3rem;
+    --tamany-h2: 2.25rem;
+    --tamany-h3: 1.25rem;
+    --tamany-body: 1rem;
+
+    --sombra: 0.3em 0.3em 0.8em rgba(0,0,0,0.3);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --tamany-h1: 4.5rem;
+        --tamany-h2: 3.75rem;
+        --tamany-h3: 1.5rem;
+        --tamany-body: 1.125rem;
+    }
+}
+
+nav {
+    display: none;
+}
+
+strong {
+    font-weight: var(--pes-negre);
+}
+
+body {
+    background: var(--color-clar);
+    color: var(--color-fosc);
+    margin: 0;
+    font-family: var(--font-principal);
+    font-size: var(--tamany-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--tamany-h1);
+}
+
+h2 {
+    font-size: var(--tamany-h2);
+}
+
+h3 {
+    font-size: var(--tamany-h3);
+}
+
+p {
+    font-size: var(--tamany-body);
+}
+
+.titol {
+    margin-bottom: 0.25rem;
+}
+
+.titol-intro {
+    font-weight: var(--pes-font);
+}
+
+.subtitol {
+    margin: 0;
+    font-size: var(--tamany-h3);
+}
+
+.subtitol-intro,
+.subtitol-jo {
+    background: var(--color-verd);
+    font-family: var(--font-secundaria);
+    margin-bottom: 2em;
+    padding: .25em 1em;
+}
+
+.titol-intro strong {
+    display: block;
+}
+
+.intro {
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        margin: 0 auto;
+        width: min-content;
+        grid-column-gap: 2em;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+
+.intro-img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitol-intro {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+}
+}
+
+.intro-img {
+    box-shadow: var(--sombra);
+}
+
+.subtitol-intro {
+    display: inline-block;
 }
