@@ -148,3 +148,77 @@ p {
 .subtitol-intro {
     display: inline-block;
 }
+
+.meusServeis {
+    background-color: var(--color-fosc);
+    color: var(--color-clar);
+    text-align: center;
+    background-image: url('../img/Naturaleza.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.titol-serveis {
+    color: var(--color-verd);
+    position: relative;
+    padding-bottom: 1em;
+    font-size: var(--tamany-h1);
+}
+
+@media (min-width: 800px) {
+    .serveis{
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .servei + .servei{
+        margin-left: 5em;
+    }
+}
+
+.servei {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.titol-jo strong {
+    display: block;
+}
+
+.jo {
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .jo {
+        display: grid;
+        margin: 0 auto;
+        width: min-content;
+        grid-column-gap: 2em;
+        grid-template-areas:
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-template-columns: max-content min-content;
+    }
+
+.jo-img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+}
+
+.subtitol-jo {
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: left;
+    position: relative;
+    right: 0em;
+    width: calc(100% + 3em);
+    margin-bottom: 0;
+}
+}
