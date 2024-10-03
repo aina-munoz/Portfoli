@@ -217,8 +217,9 @@ p {
         position: relative;
         left: -1em;
         width: calc(100% + 2em);
-        margin-bottom: 0;
+        margin-bottom: auto;
         align-self: start;
+        margin-top: auto;
     }
 
     .jo-img {
@@ -238,4 +239,25 @@ p {
     background-color: var(--color-fosc);
     color: var(--color-clar);
     text-align: center;
+}
+
+.portfoli {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.portfoli-obj {
+    background-color: var(--color-fosc);
+    overflow: hidden;
+}
+
+.portfoli-img {
+    transition:
+    transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+}
+
+.portfoli-img:hover {
+    transform: scale(1.2);
+    opacity: .5;
 }
