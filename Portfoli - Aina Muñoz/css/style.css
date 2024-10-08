@@ -176,6 +176,7 @@ p {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 3em;
     }
 
     .servei + .servei{
@@ -265,4 +266,63 @@ p {
 .portfoli-img:hover {
     transform: scale(1.2);
     opacity: .5;
+}
+
+.btn {
+    display:inline-block;
+    background-color: var(--color-verd);
+    padding: .5em 1.25em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: var(--pes-negre);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-fosc);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: var(--color-clar);
+    color: var(--color-verd);
+    text-align: center;
+    font-size: var(--tamany-h3);
+    padding: 2.5em 0;
+}
+
+.footer a {
+    color: var(--color-verd);
+    text-decoration: none;
+
+}
+
+.link {
+    font-weight: var(--pes-negre);
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link-list {
+    padding: .5em;
+}
+
+.link:hover,
+.link-list:hover {
+    opacity: 0.7;
+}
+
+.item-list {
+    margin: 0 0.5em;
+}
+
+.lista {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
