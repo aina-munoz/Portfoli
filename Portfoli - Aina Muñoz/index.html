@@ -7,18 +7,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="./css/style.css">
+   <script src="./js/script.js"></script>
     <title>Aina Muñoz</title>
     <script src="https://kit.fontawesome.com/697c3cef37.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="./img/Logo negre.png">
         </div>
-        <button>
-            <span>CLICK</span>
+        <button class="desplegable">
+            <span id="hola" class="hamburger"></span>
         </button>
-        <nav class="menu">
+        <nav id="m" class="menu">
             <ul class="menu-lista">
                 <li class="menu-item"><a href="#Intro" class="menu-link">Aina</a></li>
                 <li class="menu-item"><a href="#Serveis" class="menu-link">Serveis</a></li>
@@ -101,4 +103,11 @@
         </ul>
     </footer>
 </body>
+
+<script>
+    document.getElementById("hola").addEventListener("click", function(){
+        document.getElementById("m").classList.add("xavi");
+    })
+</script>
+
 </html>
