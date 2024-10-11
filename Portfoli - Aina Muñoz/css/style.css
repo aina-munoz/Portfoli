@@ -377,9 +377,9 @@ header {
 .hamburger,
 .hamburger::after,
 .hamburger::before {
-    background-color: var(--color-fosc);
-    width: 2em;
-    height: 3px;
+    background-color: black;
+    width: 1.75em;
+    height: 2.5px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
