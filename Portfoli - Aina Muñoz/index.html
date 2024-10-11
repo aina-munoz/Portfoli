@@ -22,10 +22,10 @@
         </button>
         <nav id="m" class="menu">
             <ul class="menu-lista">
-                <li class="menu-item"><a href="#Intro" class="menu-link">Aina</a></li>
-                <li class="menu-item"><a href="#Serveis" class="menu-link">Serveis</a></li>
-                <li class="menu-item"><a href="#Jo" class="menu-link">Sobre jo</a></li>
-                <li class="menu-item"><a href="#Treballs" class="menu-link">Treballs</a></li>
+                <li class="menu-item"><a href="#Intro" class="menu-link" id="b1">Aina</a></li>
+                <li class="menu-item"><a href="#Serveis" class="menu-link" id="b2">Serveis</a></li>
+                <li class="menu-item"><a href="#Jo" class="menu-link" id="b3">Sobre jo</a></li>
+                <li class="menu-item"><a href="#Treballs" class="menu-link" id="b4">Treballs</a></li>
             </ul>
         </nav>
     </header>
@@ -50,7 +50,7 @@
                 <p>Soc tècnic deportiu de nivell I de gimnàstica rítmica.</p>
             </div>
         </div>
-        <a href="Treballs" class="btn">Treballs</a>
+        <a href="#Treballs" class="btn">Treballs</a>
     </section>
     <section id="Jo" class="jo">
         <h2 class="titol titol-jo">Sobre jo</h2>
@@ -107,6 +107,18 @@
 <script>
     document.getElementById("hola").addEventListener("click", function(){
         document.getElementById("m").classList.add("xavi");
+    })
+    document.getElementById("b1").addEventListener("click", function(){
+        document.getElementById("m").classList.remove("xavi");
+    })
+    document.getElementById("b2").addEventListener("click", function(){
+        document.getElementById("m").classList.remove("xavi");
+    })
+    document.getElementById("b3").addEventListener("click", function(){
+        document.getElementById("m").classList.remove("xavi");
+    })
+    document.getElementById("b4").addEventListener("click", function(){
+        document.getElementById("m").classList.remove("xavi");
     })
 </script>
 
